@@ -4,8 +4,8 @@
 # cmd+shift+C to comment/uncomment
 
 library(tidyverse)
-setwd("/Users/marie/Documents/ENSE3/3A/Courses/Data Visualization/Datasets/")
-# setwd("/Users/marie/Downloads/")
+#setwd("/Users/marie/Documents/ENSE3/3A/Courses/Data Visualization/Datasets/")
+setwd("/Users/andre/Documents/Università/Magistrale/SDU/DataVisualization/Exam")
 
 ### Data --------------------------------------------------------------------
 dataframe <- read_csv("Forest_and_Carbon.csv", show_col_types = FALSE) # readr version
@@ -374,7 +374,7 @@ cat0<- as.data.frame(cat)
 ggplot(cat0, aes(x=V1, V2)) 
 
 ggplot(cat0, aes(x=V1)) + for (i in 1:10){
-  geom_line(aes(y=as.name(paste("V","i", sep="")))) +
+  geom_line(aes(y=as.name(paste("V","i", sep="")))) #+
 }
 
 # data <- read_csv("Forest_and_Carbon.csv", col_names=FALSE) # readr version
